@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DApp ARSV Treasury</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>DApp ARSV Treasury</h1>
+    
+    <div class="wallet-info">
+      <p><strong>Cuenta:</strong> <span id="account">-</span></p>
+      <p><strong>Balance USDT:</strong> <span id="usdt-balance">-</span></p>
+      <p><strong>Balance ARSV:</strong> <span id="arsv-balance">-</span></p>
+    </div>
+    
+    <div class="actions">
+      <input type="number" id="amount" placeholder="Cantidad (en tokens)" />
+      <button id="buyButton" onclick="buyARSV()">Comprar ARSV</button>
+      <button id="sellButton" onclick="sellARSV()">Vender ARSV</button>
+    </div>
+    
+    <div class="status">
+      <p id="status">Conectando...</p>
+    </div>
+    
+    <div class="events">
+      <h2>Eventos</h2>
+      <ul id="event-log"></ul>
+    </div>
+  </div>
+
+  <!-- Cargar ethers.js -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <!-- Tu script de lógica -->
+  <script src="script.js"></script>
+</body>
+</html>
